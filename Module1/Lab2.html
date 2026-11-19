@@ -4,37 +4,38 @@
 <head>
 	<script src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
 	<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
-<style>
-	#para-id {
-		color: green;
-	}
-	h2{
-		color: red;
-		font-style: italic;
-	}
-</style>
+	<style>
+		.para-class {
+			color: green;
+		}
+
+		h2 {
+			color: red;
+			font-style: italic;
+		}
+	</style>
 </head>
 
 <body>
 	<div id="my-react-app"></div>
 	<script>
 		const rootEl = document.getElementById('my-react-app');
-		
+
 		var el = React.createElement("div",
-			{id:"para-id", key:"key1"},
+			{ id: "para-id", key: "key1" },
 			React.createElement("h2",
-			{id:"header-id"},
-			"Welcome to the world of React!")
+				{ id: "header-id" },
+				"Welcome to the world of React!")
 		);
 
 		var another_el = React.createElement("p",
-		{key:"key2"},
-		"React Seems rather tedious to work with."
+			{ key: "key2" , className: "para-class" },
+			"React Seems rather tedious to work with."
 		);
 
-		var element_list= [el, another_el];
-		var outer_div_el =  React.createElement("div",
-			{id:"outer-div-id"},
+		var element_list = [el, another_el];
+		var outer_div_el = React.createElement("div",
+			{ id: "outer-div-id" },
 			element_list
 		);
 		const root = ReactDOM.createRoot(rootEl);
