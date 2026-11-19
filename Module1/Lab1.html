@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+	<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+
+    <!-- <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+	<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script> -->
+</head>
+<body>
+	<div id="my-react-app"></div>
+	<script>
+        const devEl =document.getElementById('my-react-app');
+		var el = React.createElement("h1", {}, "Welcome to the world of React!");
+		ReactDOM.render(el, devEl);
+	</script>
+</body>
+</html>

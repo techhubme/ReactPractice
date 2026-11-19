@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+<body>
+	<div id="my-react-app"></div>
+	<script type="text/babel">
+		const rootEl = document.getElementById('my-react-app');
+		const root = ReactDOM.createRoot(rootEl);
+		const fruit_orange = "Orange";
+		const fruit_apple = "Apple";
+		const fruit_banana = "Banana";
+		function pickFruit(index) {
+			if (index == 1) {
+				return fruit_orange;
+			} else if (index == 2) {
+				return fruit_apple;
+			} else if (index == 3) {
+				return fruit_banana;
+			} else {
+				return (<b>Invalid fruit!</b>)
+			}
+		}
+		const imagePath = "images/fruites.jpg"
+		const image_el= (<img src={imagePath}/>);
+		const fruitsList = (
+			<div>
+				<div key="el-key" className="my-fruit">Some of my favorite fruits</div>
+				<ul>
+					<li key="O-key">{pickFruit(1)}</li>
+					<li key="A-key">{pickFruit(2)}</li>
+					<li key="B-key">{pickFruit(3)}</li>
+					<li key="U-key">{pickFruit(4)}</li>
+				</ul>
+				{image_el}
+			</div>
+		);
+		root.render(fruitsList);
+	</script>
+</body>
+
+</html>
