@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+<style>
+    .my-fruit {
+        color: red;
+        font-style: italic;
+    }
+</style>
+
+<body>
+    <div id="my-react-app"></div>
+    <script type="text/babel">
+
+        const rootEl = document.getElementById('my-react-app');
+		const root = ReactDOM.createRoot(rootEl);
+
+        const orange_str = "Orange";
+        const apple_str = "Apple";
+        const banana_str = "Banana";
+
+        const fruit_img = 'images/fruit.jpg'
+        const image_el = <img src={fruit_img} />
+
+        function on_tick() {
+
+            var items = ['Jackfruit', 'Mango', 'Strawberry', 'Grapes', 'Peach',
+                'Pineapple', 'Watermelon', 'Papaya', 'Guava', 'Lychee',
+                'Pomegranate', 'Coconut', 'Cherry', 'Fig', 'Date', 'Raspberry',
+                'Blueberry', 'Lemon', 'Lime', 'Tangerine', 'Cantaloupe',
+                'Honeydew', 'Kiwifruit', 'Passionfruit', 'Dragonfruit',
+                'Persimmon', 'Starfruit', 'Clementine', 'Nectarine',
+                'Mandarin', 'Currant', 'Gooseberry', 'Mulberry', 'Boysenberry',
+                'Elderberry', 'Cloudberry', 'Salak', 'Sours'];
+
+            var item = items[Math.floor(Math.random() * items.length)];
+
+
+            const fruit_list = (
+                <div>
+                    <div key="el-key" >Some of my favorite fruits</div>
+                    <ul>
+                        <li key="O-key">{orange_str}</li>
+                        <li key="A-key">{apple_str}</li>
+                        <li key="B-key">{banana_str}</li>
+                        <li key="N-key" className="my-fruit" >{item}</li>
+                    </ul>
+                    {image_el}
+                </div>
+            );
+            root.render(fruit_list);
+        }
+
+        setInterval(on_tick, 2000);
+    </script>
+</body>
+
+</html>

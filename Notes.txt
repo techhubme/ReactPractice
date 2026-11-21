@@ -15,5 +15,9 @@ $ npm -v
 ------------------------------------------------------------
 Install Local Http Server to server the html packages
 ------------------------------------------------------------
-sudo npm install -g http-server
+$ sudo npm install -g http-server
 
+------------------------------------------------------------
+Install Create React App Package
+------------------------------------------------------------
+$ sudo npm install -g create-react-app
