@@ -1,0 +1,13 @@
+
+
+The packages in the default repositories are often older than the current LTS release. For a newer version, use NodeSource. Replace 22 with the LTS major version you want:
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+sudo apt install -y nodejs
+
+------------------------------------------------------------
+Install Nodejs and NPM
+------------------------------------------------------------
+$ sudo apt update
+$ sudo apt install nodejs
+$ sudo apt install npm
+------------------------------------------------------------
