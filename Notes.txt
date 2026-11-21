@@ -18,6 +18,28 @@ Install Local Http Server to server the html packages
 $ sudo npm install -g http-server
 
 ------------------------------------------------------------
-Install Create React App Package
+Install and Create React App
 ------------------------------------------------------------
 $ sudo npm install -g create-react-app
+$ sudo npx create-react-app myreactapp
+
+Success! Created myreactapp at /home/.../myreactapp
+Inside that directory, you can run several commands:
+
+  npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd myreactapp
+  sudo npm start
